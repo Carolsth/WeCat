@@ -19,11 +19,11 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
-      - name: Scan for common Rails security vulnerabilities using static analysis
-        run: bin/brakeman --no-pager
-
       - name: Update Bundler
         run: gem install bundler
+
+      - name: Scan for common Rails security vulnerabilities using static analysis
+        run: bin/brakeman --no-pager
 
   scan_js:
     runs-on: ubuntu-latest
@@ -60,11 +60,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libjemalloc2 libvips sqlite3
-          bundle install
-
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -73,6 +68,11 @@ jobs:
         with:
           ruby-version: .ruby-version
           bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install --no-install-recommends -y google-chrome-stable curl libjemalloc2 libvips sqlite3
+          bundle install
 
       - name: Run RSpec tests
         run: bin/rails db:test:prepare && bin/rspec
