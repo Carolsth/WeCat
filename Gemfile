@@ -50,16 +50,17 @@ group :development do
   gem "web-console"
 
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
-  gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem "error_highlight", ">= 0.7.0", platforms: [ :ruby ]
 end
+
 
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-  gem 'cucumber-rails', require: false
-  gem 'factory_bot_rails'
+  gem "cucumber-rails", require: false
+  gem "factory_bot_rails"
 end
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem "rspec-rails"
 end
