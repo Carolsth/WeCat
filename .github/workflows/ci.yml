@@ -19,12 +19,15 @@ jobs:
           ruby-version: .ruby-version
           bundler-cache: true
 
+
       - name: Update Bundler
-        run: gem install bundler '~> 2.5.0'
+        run: gem install bundler
 
       - name: Configure Bundler to skip :development group
-        run: |
-          bundle config --local without 'development'
+        run: bundle config --local without 'development'
+
+      - name: Install dependencies
+        run: bundle install
 
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
