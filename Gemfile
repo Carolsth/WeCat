@@ -51,13 +51,14 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-
+  gem "pry"
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
-  #gem "error_highlight", "0.7.0", platforms: [ :ruby ]
+  # gem "error_highlight", "0.7.0", platforms: [ :ruby ]
 end
 
 
 group :test do
+  gem "rspec"
   gem "capybara"
   gem "selenium-webdriver"
   gem "cucumber-rails", require: false
