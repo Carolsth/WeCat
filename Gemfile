@@ -37,7 +37,7 @@ gem "bootsnap", require: false
 gem "faker"
 gem "database_cleaner-active_record"
 gem "sassc-rails", "~> 2.1.2"
-gem 'devise'
+gem "devise"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

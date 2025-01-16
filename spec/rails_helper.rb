@@ -13,7 +13,7 @@ require 'support/factory_bot'
 # rails_helper.rb
 
 RSpec.configure do |config|
-  config.include Devise::Test::IntegrationHelpers, type: :request 
+  config.include Devise::Test::IntegrationHelpers, type: :request
 end
 
 # Add additional requires below this line. Rails is not loaded until this point!
