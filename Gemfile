@@ -38,6 +38,7 @@ gem "faker"
 gem "database_cleaner-active_record"
 gem "sassc-rails", "~> 2.1.2"
 gem "devise"
+gem "simple_form"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ], require: "debug/prelude"
