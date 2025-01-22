@@ -35,7 +35,6 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem "faker"
-gem "database_cleaner-active_record"
 gem "sassc-rails", "~> 2.1.2"
 gem "devise"
 
@@ -62,6 +61,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "database_cleaner"
+  gem "database_cleaner-active_record"
   gem "simplecov"
   gem "cucumber-rails", require: false
 end
