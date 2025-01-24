@@ -1,0 +1,33 @@
+{
+  "name": "wecat",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:devise": "sass ./app/assets/stylesheets/devise.scss:./app/assets/builds/devise.css --no-source-map --load-path=node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carolsth/WeCat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Carolsth/WeCat/issues"
+  },
+  "homepage": "https://github.com/Carolsth/WeCat#readme",
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^8.0.12"
+  }
+}
