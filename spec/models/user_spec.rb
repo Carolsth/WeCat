@@ -49,6 +49,7 @@ RSpec.describe User, type: :model do
         create(:user, username: "John Doe")
         user_duplicate = build(:user, username: "John Doe")
         expect(user_duplicate).to_not be_valid
+        expect(user_duplicate.errors[:username]).to include("has already been taken")
       end
     end
 
@@ -57,6 +58,7 @@ RSpec.describe User, type: :model do
         create(:user, email: "teste@gmail.com")
         email_duplicate = build(:user, email: "teste@gmail.com")
         expect(email_duplicate).to_not be_valid
+        expect(email_duplicate.errors[:email]).to include("has already been taken")
       end
     end
 end
