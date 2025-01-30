@@ -66,5 +66,5 @@ group :test do
   gem "database_cleaner"
   gem "simplecov"
   gem "cucumber-rails", require: false
-  gem 'shoulda-matchers'
+  gem "shoulda-matchers"
 end
