@@ -19,6 +19,9 @@ RSpec.describe User, type: :model do
 
       user4 = build(:user, phone: nil)
       expect(user4).to_not be_valid
+
+      user5 = build(:user, name: nil)
+      expect(user).to_not be_valid
     end
   end
 

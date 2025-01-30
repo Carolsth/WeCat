@@ -6,6 +6,8 @@
   <div class="form-inputs">
     <%= f.input :username, label: false, placeholder: 'Username',
                 input_html: { class: "username", class: "form-control", style: "height: 40px; margin-bottom: 10px;"} %>
+    <%= f.input :username, label: false, placeholder: 'Nome',
+                input_html: { class: "name", class: "form-control", style: "height: 40px; margin-bottom: 10px;"} %>
     <%= f.input :phone, input_html:{ class: "mask-phone", class: "form-control", style: "height: 40px; margin-bottom: 10px;" }, label: false, placeholder: 'Telefone' %>
     <%= f.input :email,
                 required: true,
