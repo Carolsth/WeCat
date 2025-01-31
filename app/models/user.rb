@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: { case_sensitive: false }
   validates :phone, presence: true, format: { with: /\A\d{10,}\z/, message: "somente números são permitidos" }
   validates :name, presence: true
+
+  enum role: { user: "user", admin: "admin" }
 end
